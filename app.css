@@ -87,6 +87,12 @@ a {
         border-radius: 3px 3px 50% 50%;
     }
 
+    60% {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+    }
+
     100% {
         top: 62px;
         width: 14px;
