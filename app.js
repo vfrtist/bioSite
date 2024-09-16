@@ -17,12 +17,3 @@ for (let btn of headerButtons) {
     })
 }
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 25) {
-        header.classList.add('scrolled');
-    }
-    else {
-        header.classList.remove('scrolled');
-    }
-})
-
