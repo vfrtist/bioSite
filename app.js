@@ -1,5 +1,6 @@
 const headerButtons = document.querySelectorAll('.headerButton');
 const bubble = document.querySelector('#pointer');
+const header = document.querySelector('header');
 
 function make(item) { return document.createElement(item.toString()); }
 
@@ -15,4 +16,13 @@ for (let btn of headerButtons) {
         bubble.classList.remove('move')
     })
 }
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 25) {
+        header.classList.add('scrolled');
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+})
 
