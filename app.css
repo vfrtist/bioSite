@@ -153,22 +153,29 @@ main {
     padding: 24px;
     background-color: var(--font-light);
     border-radius: 16px;
-    transition: scale .2s ease;
 }
 
 .card img {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    transition: scale .2s ease;
 }
 
 .card:hover {
+    cursor: zoom-in;
+}
+
+.card:hover img {
     scale: 1.03;
 }
 
-.modal::backdrop {
-    background: #00000059;
-    overflow: hidden;
+.card figcaption {
+    margin-top: 8px;
+}
+
+body:has(.modal) main {
+    display: none;
 }
 
 .modal img {
