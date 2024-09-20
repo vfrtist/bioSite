@@ -4,10 +4,10 @@
     --base1: #d3dedf;
     --base2: #8cedff;
     --base2: #6b9aaa;
-    --main: linear-gradient(115deg, var(--base1) 35%, var(--base2) 100%);
+    /* --main: linear-gradient(115deg, var(--base1) 35%, var(--base2) 100%); */
     --font-light: #fffefb;
     --font-dark: #2c2027;
-    --accent1: #1781b2;
+    --accent1: #0871a2;
     --accent2: #ff9861;
     --shadow: #293d4063;
     --canvas: #d3dedf;
@@ -15,6 +15,14 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+    padding-left: 2em;
+    border-left: 4px solid var(--accent2);
+    font-style: italic;
 }
 
 body {
@@ -59,7 +67,7 @@ nav {
 a {
     box-sizing: border-box;
     text-decoration: none;
-    color: var(--font-light);
+    color: var(--font-dark);
     transition: color .2s ease, background .2s ease;
 }
 
@@ -222,6 +230,8 @@ body:has(.modal) main {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    max-height: 320px;
+    font-size: 16pt;
 }
 
 .box img {
@@ -245,7 +255,7 @@ body:has(.modal) main {
     padding-inline: 4px;
     width: 16px;
     height: 16px;
-    stroke: var(--font-light);
+    stroke: var(--font-dark);
     stroke-width: 2px;
     overflow: visible;
     fill: none;
@@ -289,6 +299,10 @@ body:has(.modal) main {
 @media screen and (max-width: 900px) {
     .box {
         grid-template-columns: 1fr;
+    }
+
+    .box img:nth-child(odd) {
+        filter: drop-shadow(20px 20px 0px var(--accent2));
     }
 
     .headerButton span {

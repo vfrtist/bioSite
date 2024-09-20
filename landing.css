@@ -16,14 +16,6 @@ h1 {
     text-shadow: .07em .07em 0px var(--accent1), .14em .14em 0px var(--accent2);
 }
 
-.icon {
-    stroke: var(--font-dark);
-}
-
-nav a {
-    color: var(--font-dark);
-}
-
 @media (orientation: landscape) {
     body {
         background-size: cover;
