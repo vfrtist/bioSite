@@ -1,8 +1,10 @@
 :root {
     scroll-behavior: smooth;
     --base1: #c2e5f4;
+    --base1: #e2f6ff;
     --base2: #9ef0ff;
-    --main: linear-gradient(90deg, var(--base1) 0%, var(--base2) 100%);
+    --base2: #8cedff;
+    --main: linear-gradient(115deg, var(--base1) 0%, var(--base2) 100%);
     --font-light: #fffefb;
     --font-dark: #2c2027;
     --accent1: #1781b2;
@@ -17,7 +19,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: var(--main);
+    background: fixed var(--main);
     color: var(--font-color);
     font-family: "Cabin", sans-serif;
     box-sizing: border-box;
@@ -35,6 +37,7 @@ header {
     background: var(--main);
     z-index: 1;
     box-shadow: none;
+    justify-content: flex-end;
 }
 
 .scrolled::before {
@@ -138,6 +141,10 @@ main {
 #title {
     margin: 0px auto 0px 24px;
     font-size: 32px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: var(--font-light);
+    text-shadow: .07em .07em 0px var(--accent1), .14em .14em 0px var(--accent2);
 }
 
 #gallery {
@@ -310,7 +317,7 @@ body:has(.modal) main {
 
 @media screen and (max-width: 600px) {
     #title {
-        font-size: 24pt;
+        font-size: 22pt;
     }
 }
 
