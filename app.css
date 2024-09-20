@@ -1,15 +1,16 @@
 :root {
     scroll-behavior: smooth;
-    --base1: #c2e5f4;
     --base1: #e2f6ff;
-    --base2: #9ef0ff;
+    --base1: #d3dedf;
     --base2: #8cedff;
-    --main: linear-gradient(115deg, var(--base1) 0%, var(--base2) 100%);
+    --base2: #6b9aaa;
+    --main: linear-gradient(115deg, var(--base1) 35%, var(--base2) 100%);
     --font-light: #fffefb;
     --font-dark: #2c2027;
     --accent1: #1781b2;
     --accent2: #ff9861;
     --shadow: #293d4063;
+    --canvas: #d3dedf;
 }
 
 ::-webkit-scrollbar {
@@ -19,7 +20,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: fixed var(--main);
+    background: fixed var(--canvas);
     color: var(--font-color);
     font-family: "Cabin", sans-serif;
     box-sizing: border-box;
@@ -34,21 +35,10 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    background: var(--main);
+    background: var(--canvas);
     z-index: 1;
     box-shadow: none;
     justify-content: flex-end;
-}
-
-.scrolled::before {
-    content: "";
-    background: var(--main);
-    position: absolute;
-    z-index: -1;
-    filter: blur(24px);
-    inset: -40px;
-    width: 100%;
-    animation: fade-in .4s;
 }
 
 nav {
@@ -69,7 +59,7 @@ nav {
 a {
     box-sizing: border-box;
     text-decoration: none;
-    color: var(--font-dark);
+    color: var(--font-light);
     transition: color .2s ease, background .2s ease;
 }
 
@@ -255,7 +245,7 @@ body:has(.modal) main {
     padding-inline: 4px;
     width: 16px;
     height: 16px;
-    stroke: var(--font-dark);
+    stroke: var(--font-light);
     stroke-width: 2px;
     overflow: visible;
     fill: none;

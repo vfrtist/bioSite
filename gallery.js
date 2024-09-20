@@ -14,8 +14,3 @@ for (let card of main.querySelectorAll('.card')) {
         modal.addEventListener('click', () => { modal.remove(); })
     })
 }
-
-// magnify() {
-//     image.style.removeProperty('width');
-//     image.style.removeProperty('height');
-//     image.style.removeProperty('rotate');
