@@ -6,7 +6,8 @@
     --font-light: #fffefb;
     --font-dark: #2c2027;
     --accent1: #1781b2;
-    --accent2: #f5a479;
+    --accent2: #ff9861;
+    --shadow: #293d4063;
 }
 
 ::-webkit-scrollbar {
@@ -175,7 +176,7 @@ main {
 }
 
 body:has(.modal) main {
-    display: none;
+    visibility: hidden;
 }
 
 .modal img {
@@ -224,6 +225,14 @@ body:has(.modal) main {
     height: 100%;
 }
 
+.box img:nth-child(even) {
+    filter: drop-shadow(3px 3px 2px var(--shadow)) drop-shadow(20px 20px 0px var(--accent2));
+}
+
+.box img:nth-child(odd) {
+    filter: drop-shadow(-3px -3px 2px var(--shadow)) drop-shadow(-20px -20px 0px var(--accent2));
+}
+
 .icon {
     padding-inline: 4px;
     width: 16px;
@@ -258,7 +267,21 @@ body:has(.modal) main {
     }
 }
 
+@media screen and (max-width: 1050px) {
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box div {
+        grid-column: span 1;
+    }
+}
+
+
 @media screen and (max-width: 900px) {
+    .box {
+        grid-template-columns: 1fr;
+    }
 
     .headerButton span {
         display: none;
@@ -281,6 +304,10 @@ body:has(.modal) main {
 }
 
 @media screen and (max-width: 400px) {
+    main {
+        padding: 48px 0px;
+    }
+
     #title {
         font-size: 18pt;
     }
@@ -292,7 +319,7 @@ body:has(.modal) main {
 
     .card {
         width: 100%;
-
+        border-radius: 0px;
     }
 
 }
